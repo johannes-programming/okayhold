@@ -92,21 +92,21 @@ class TestOkaySet(unittest.TestCase):
 
 class TestDoc(unittest.TestCase):
     def test_doc(self: Self) -> None:
-        name: str
-        t: str
-        for t in ("Object", "Dict", "List", "Set"):
-            name = "Okay" + t
-            with self.subTest(name=name):
-                self.go(name=name)
+        types: tuple[type]
+        cls: type
+        types = (OkayObject, OkayDict, OkayList, OkaySet)
+        for cls in types:
+            with self.subTest(name=cls.__name__):
+                self.go(cls)
 
-    def go(self: Self, name: str) -> None:
+    def go(self: Self, y: type) -> None:
         a: Any
         b: Any
         doc: Any
         error: Any
+        name: str
         obj: Any
-        y: Any
-        y = getattr(core, name)
+        name = y.__name__
         for a in dir(y):
             b = getattr(y, a)
             if not callable(b) and not isinstance(b, property):
