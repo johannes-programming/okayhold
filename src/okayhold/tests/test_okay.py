@@ -104,9 +104,7 @@ class TestDoc(unittest.TestCase):
         b: Any
         doc: Any
         error: Any
-        name: str
         obj: Any
-        name = y.__name__
         for a in dir(y):
             b = getattr(y, a)
             if not callable(b) and not isinstance(b, property):
@@ -116,7 +114,7 @@ class TestDoc(unittest.TestCase):
             if a == "__subclasshook__":
                 continue
             doc = getattr(b, "__doc__", None)
-            error = "%r inside %r has no docstring" % (a, name)
+            error = "%r inside %r has no docstring" % (a, y.__name__)
             self.assertNotEqual(doc, None, error)
         try:
             obj = y()

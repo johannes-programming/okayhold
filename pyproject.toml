@@ -31,7 +31,7 @@ keywords = []
 name = "okayhold"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "0.3.0+okay.types"
+version = "0.3.0+okay.name"
 
 [project.license]
 file = "LICENSE.txt"
