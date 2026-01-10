@@ -2,10 +2,9 @@ from typing import *
 
 import setdoc
 from cmp3 import CmpABC
+from datahold.core.HoldObject import HoldObject
 from datarepr import datarepr
 from scaevola import Scaevola
-
-from .HoldObject import HoldObject
 
 __all__ = ["OkayObject"]
 
