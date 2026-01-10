@@ -2,8 +2,9 @@ from typing import *
 
 import setdoc
 from datahold.core.HoldDict import HoldDict
-from datahold.core.OkayObject import OkayObject
 from frozendict import frozendict
+
+from okayhold.core.OkayObject import OkayObject
 
 __all__ = ["OkayDict"]
 
