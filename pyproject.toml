@@ -19,8 +19,11 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
+    "cmp3>=0.5.1,<1",
     "datahold>=2.3a2,<3",
+    "datarepr>=1.1.0,<2",
     "frozendict>=2.4.6,<3",
+    "scaevola>=1.1.1,<2",
     "setdoc>=1.2.8,<2",
 ]
 description = "This project provides mutable collection types with a data property and common sense implementations of certain methods."
@@ -28,7 +31,7 @@ keywords = []
 name = "okayhold"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "0.3.0+okay.set"
+version = "0.3.0+okay.object"
 
 [project.license]
 file = "LICENSE.txt"
