@@ -2,7 +2,11 @@ import unittest
 from typing import *
 
 from datahold import core
-from datahold.core import *
+
+from okayhold.core.OkayDict import OkayDict
+from okayhold.core.OkayList import OkayList
+from okayhold.core.OkayObject import OkayObject
+from okayhold.core.OkaySet import OkaySet
 
 
 class TestOkayDict(unittest.TestCase):
