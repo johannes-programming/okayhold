@@ -1,9 +1,9 @@
 import unittest
 from typing import *
 
-from okayhold.core.OkayDict import OkayDict
+from datahold import core
 
-__all__ = ["TestOkayDict"]
+from okayhold.core.OkayDict import OkayDict
 
 
 class TestOkayDict(unittest.TestCase):

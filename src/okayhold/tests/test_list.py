@@ -1,9 +1,9 @@
 import unittest
 from typing import *
 
-from okayhold.core.OkayList import OkayList
+from datahold import core
 
-__all__ = ["TestOkayList"]
+from okayhold.core.OkayList import OkayList
 
 
 class TestOkayList(unittest.TestCase):

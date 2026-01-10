@@ -1,30 +1,29 @@
 import unittest
 from typing import *
 
-from okayhold import core
+from datahold import core
 
-__all__ = ["TestDoc"]
+from okayhold.core.OkayDict import OkayDict
+from okayhold.core.OkayList import OkayList
+from okayhold.core.OkayObject import OkayObject
+from okayhold.core.OkaySet import OkaySet
 
 
 class TestDoc(unittest.TestCase):
     def test_doc(self: Self) -> None:
-        name: str
-        s: str
-        t: str
-        for s in ("Data", "Hold", "Okay"):
-            for t in ("Object", "Dict", "List", "Set"):
-                name = s + t
-                with self.subTest(name=name):
-                    self.go(name=name)
+        types: tuple[type]
+        cls: type
+        types = (OkayObject, OkayDict, OkayList, OkaySet)
+        for cls in types:
+            with self.subTest(name=cls.__name__):
+                self.go(cls)
 
-    def go(self: Self, name: str) -> None:
+    def go(self: Self, y: type) -> None:
         a: Any
         b: Any
         doc: Any
         error: Any
         obj: Any
-        y: Any
-        y = getattr(getattr(core, name), name)
         for a in dir(y):
             b = getattr(y, a)
             if not callable(b) and not isinstance(b, property):
@@ -34,7 +33,7 @@ class TestDoc(unittest.TestCase):
             if a == "__subclasshook__":
                 continue
             doc = getattr(b, "__doc__", None)
-            error = "%r inside %r has no docstring" % (a, name)
+            error = "%r inside %r has no docstring" % (a, y.__name__)
             self.assertNotEqual(doc, None, error)
         try:
             obj = y()

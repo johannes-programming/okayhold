@@ -2,8 +2,7 @@ from typing import *
 
 import setdoc
 from datahold.core.HoldSet import HoldSet
-
-from okayhold.core.OkayObject import OkayObject
+from datahold.core.OkayObject import OkayObject
 
 __all__ = ["OkaySet"]
 
