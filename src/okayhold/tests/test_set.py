@@ -1,8 +1,6 @@
 import unittest
 from typing import *
 
-from datahold import core
-
 from okayhold.core.OkaySet import OkaySet
 
 

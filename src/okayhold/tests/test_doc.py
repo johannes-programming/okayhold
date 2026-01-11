@@ -1,8 +1,6 @@
 import unittest
 from typing import *
 
-from datahold import core
-
 from okayhold.core.OkayDict import OkayDict
 from okayhold.core.OkayList import OkayList
 from okayhold.core.OkayObject import OkayObject

@@ -1,7 +1,6 @@
 import unittest
 from typing import *
 
-from datahold import core
 
 from okayhold.core.OkayList import OkayList
 
